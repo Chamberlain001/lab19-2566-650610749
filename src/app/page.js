@@ -109,12 +109,8 @@ export default function Home() {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
               />
-              {loadingLogin && (
-                <Button disabled onClick={login}>
-                  Login...
-                </Button>
-              )}
-              {!loadingLogin && <Button onClick={login}>Login</Button>}
+              {!loadingLogin && <Button disabled>Login...</Button>}
+              {loadingLogin && <Button onClick={login}>Login</Button>}
             </Group>
           )}
           {authenUsername && (
